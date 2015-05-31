@@ -1,0 +1,39 @@
+[user]
+	name = Jonas Carlsson
+	email = jonas@jonac.se
+[color]
+	branch = auto
+	status = auto
+	diff = auto
+	ui = true
+
+[alias]
+	tree = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --decorate
+	unstage = reset HEAD --
+	co = checkout
+	br = branch
+	ci = commit
+	st = status -s
+	last = log -1 HEAD
+	recent = log -10 --oneline --graph
+	visual = !gitk
+	list = log --pretty=oneline
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lolita = log --graph --decorate --pretty=oneline --abbrev-commit --ignore-space-at-eol -t --all
+	unfin = commit -am "UNFIN"
+	restore = reset HEAD^
+
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+	deltaBaseCacheLimit = 1G
+
+[config]
+	autocrlf = input
+
+[branch]
+	autosetuprebase = always
+
+[push]
+	default = simple
